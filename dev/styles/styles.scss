@@ -1,2 +1,10 @@
+@import "partials/setup";
+@import "partials/variables";
+@import "partials/mixins";
 
+@import "partials/landing";
 
+@font-face {
+	font-family: vincent;
+	src: url("../../assets/fonts/vincent-regular-webfont.woff") format("woff");
+}

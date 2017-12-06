@@ -1,4 +1,29 @@
-@mixin buttonStyles {
+@mixin hotSnakesOuter {
+	position: absolute;
+	width: 500px;
+	text-align: center;
+	top: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin hotSnakesInner {
+	border-width: 6px;
+	border-style: solid;
+	width: 300px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 36px 0;
+	font-family: $collegiate;
+	font-size: 112px;
+
+	p {
+		line-height: 24px;
+		margin: 48px;
+	}
 }
 
 // media breakpoints

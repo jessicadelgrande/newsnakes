@@ -1,0 +1,75 @@
+// LANDING PAGE
+
+.landingWrapper {
+	width: 100vw;
+	height: 100vh;
+	background-color: $almostBlk;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.ladyContainer {
+	position: relative;
+	width: 500px;
+	height: 500px;
+}
+
+.redLady {
+	position: absolute;
+	top: -100px;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 500px;
+	height: 500px;
+}
+
+.yellowLady {
+	position: absolute;
+	top: -100px;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 500px;
+	height: 500px;
+}
+
+.heroText,
+.heroText2,
+.heroText3,
+.heroText4 {
+	@include hotSnakesOuter;
+}
+
+.heroTextInner,
+.heroTextInner2,
+.heroTextInner3,
+.heroTextInner4 {
+	@include hotSnakesInner;
+}
+
+.heroTextInner {
+	border-color: white;
+	color: white;
+}
+
+.heroTextInner2 {
+	position: absolute;
+	top: 0px;
+	left: 40px;
+	border-color: magenta;
+	color: magenta;
+}
+
+.heroTextInner3 {
+	position: absolute;
+	border-color: aquamarine;
+	color: aquamarine;
+}
+
+.heroTextInner4 {
+	position: absolute;
+	border-color: green;
+	color: green;
+}
