@@ -140,7 +140,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   justify-content: center;
   align-items: center; }
 
-.ladyContainer {
+.landingContent {
   position: relative;
   width: 500px;
   height: 500px; }
@@ -163,7 +163,15 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   width: 500px;
   height: 500px; }
 
-.heroText,
+.heroText {
+  position: absolute;
+  width: 500px;
+  text-align: center;
+  top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
 .heroText2,
 .heroText3,
 .heroText4 {
@@ -175,7 +183,23 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   justify-content: center;
   align-items: center; }
 
-.heroTextInner,
+.heroTextInner {
+  border-width: 6px;
+  border-style: solid;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 36px 0;
+  font-family: "vincent", sans-serif;
+  font-size: 112px;
+  border-color: white;
+  color: white; }
+  .heroTextInner p {
+    line-height: 24px;
+    margin: 48px; }
+
 .heroTextInner2,
 .heroTextInner3,
 .heroTextInner4 {
@@ -189,33 +213,147 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   padding: 36px 0;
   font-family: "vincent", sans-serif;
   font-size: 112px; }
-  .heroTextInner p,
-  .heroTextInner2 p,
-  .heroTextInner3 p,
-  .heroTextInner4 p {
-    line-height: 24px;
-    margin: 48px; }
-
-.heroTextInner {
-  border-color: white;
-  color: white; }
 
 .heroTextInner2 {
   position: absolute;
   top: 0px;
-  left: 40px;
-  border-color: magenta;
-  color: magenta; }
+  left: 95px;
+  border-color: transparent;
+  color: magenta;
+  opacity: 0.6; }
 
 .heroTextInner3 {
   position: absolute;
-  border-color: aquamarine;
-  color: aquamarine; }
+  top: 0px;
+  left: 103px;
+  border-color: transparent;
+  color: aquamarine;
+  opacity: 0.6; }
 
 .heroTextInner4 {
   position: absolute;
-  border-color: green;
-  color: green; }
+  top: 0px;
+  left: 99px;
+  border-color: transparent;
+  color: yellow;
+  opacity: 0.6; }
+
+.glitch2 {
+  position: relative; }
+
+.glitch2:before,
+.glitch2:after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+.glitch2:before {
+  left: 2px;
+  text-shadow: -1px 0 red;
+  clip: rect(44px, 450px, 56px, 0);
+  animation: glitch-anim-1 2s infinite linear alternate-reverse; }
+
+.glitch2:after {
+  left: -2px;
+  text-shadow: -1px 0 blue;
+  animation: glitch-anim-2 2s infinite linear alternate-reverse; }
+
+@keyframes glitch-anim-1 {
+  0% {
+    clip: rect(71px, 9999px, 96px, 0); }
+  10% {
+    clip: rect(75px, 9999px, 99px, 0); }
+  20% {
+    clip: rect(41px, 9999px, 77px, 0); }
+  30% {
+    clip: rect(34px, 9999px, 63px, 0); }
+  40% {
+    clip: rect(87px, 9999px, 75px, 0); }
+  50% {
+    clip: rect(58px, 9999px, 3px, 0); }
+  60% {
+    clip: rect(5px, 9999px, 48px, 0); }
+  70% {
+    clip: rect(15px, 9999px, 32px, 0); }
+  80% {
+    clip: rect(18px, 9999px, 18px, 0); }
+  90% {
+    clip: rect(1px, 9999px, 39px, 0); }
+  100% {
+    clip: rect(2px, 9999px, 2px, 0); } }
+
+@keyframes glitch-anim-2 {
+  0% {
+    clip: rect(49px, 9999px, 82px, 0); }
+  10% {
+    clip: rect(63px, 9999px, 21px, 0); }
+  20% {
+    clip: rect(99px, 9999px, 91px, 0); }
+  30% {
+    clip: rect(80px, 9999px, 15px, 0); }
+  40% {
+    clip: rect(9px, 9999px, 51px, 0); }
+  50% {
+    clip: rect(99px, 9999px, 71px, 0); }
+  60% {
+    clip: rect(78px, 9999px, 82px, 0); }
+  70% {
+    clip: rect(76px, 9999px, 38px, 0); }
+  80% {
+    clip: rect(37px, 9999px, 25px, 0); }
+  90% {
+    clip: rect(83px, 9999px, 60px, 0); }
+  100% {
+    clip: rect(53px, 9999px, 80px, 0); } }
+
+.glitch3 {
+  position: relative; }
+
+.glitch3:before,
+.glitch3:after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+.glitch3:before {
+  left: 2px;
+  text-shadow: -1px 0 red;
+  clip: rect(65px, 420px, 98px, 0);
+  animation: glitch-anim-1 1s infinite linear alternate-reverse; }
+
+.glitch3:after {
+  left: -2px;
+  text-shadow: -1px 0 blue;
+  animation: glitch-anim-2 3s infinite linear alternate-reverse; }
+
+.glitch4 {
+  position: relative; }
+
+.glitch4:before,
+.glitch4:after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+.glitch4:before {
+  left: 2px;
+  text-shadow: -1px 0 red;
+  clip: rect(101px, 300px, 12px, 0);
+  animation: glitch-anim-1 4s infinite linear alternate-reverse; }
+
+.glitch4:after {
+  left: -2px;
+  text-shadow: -1px 0 blue;
+  animation: glitch-anim-2 0.5s infinite linear alternate-reverse; }
 
 @font-face {
   font-family: vincent;

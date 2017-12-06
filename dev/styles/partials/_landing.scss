@@ -9,7 +9,7 @@
 	align-items: center;
 }
 
-.ladyContainer {
+.landingContent {
 	position: relative;
 	width: 500px;
 	height: 500px;
@@ -35,41 +35,162 @@
 	height: 500px;
 }
 
-.heroText,
+.heroText {
+	@include hotSnakesOuter;
+}
+
 .heroText2,
 .heroText3,
 .heroText4 {
 	@include hotSnakesOuter;
 }
 
-.heroTextInner,
+.heroTextInner {
+	@include hotSnakesInner;
+	border-color: white;
+	color: white;
+
+	p {
+		line-height: 24px;
+		margin: 48px;
+	}
+}
+
 .heroTextInner2,
 .heroTextInner3,
 .heroTextInner4 {
 	@include hotSnakesInner;
 }
 
-.heroTextInner {
-	border-color: white;
-	color: white;
-}
-
 .heroTextInner2 {
 	position: absolute;
 	top: 0px;
-	left: 40px;
-	border-color: magenta;
+	left: 95px;
+	border-color: transparent;
 	color: magenta;
+	opacity: 0.6;
 }
 
 .heroTextInner3 {
 	position: absolute;
-	border-color: aquamarine;
+	top: 0px;
+	left: 103px;
+	border-color: transparent;
 	color: aquamarine;
+	opacity: 0.6;
 }
 
 .heroTextInner4 {
 	position: absolute;
-	border-color: green;
-	color: green;
+	top: 0px;
+	left: 99px;
+	border-color: transparent;
+	color: yellow;
+	opacity: 0.6;
 }
+
+// GLITCH - HERO2
+
+.glitch2 {
+	position: relative;
+}
+
+.glitch2:before,
+.glitch2:after {
+	content: attr(data-text);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.glitch2:before {
+	left: 2px;
+	text-shadow: -1px 0 red;
+	clip: rect(44px, 450px, 56px, 0);
+	animation: glitch-anim-1 2s infinite linear alternate-reverse;
+}
+
+.glitch2:after {
+	left: -2px;
+	text-shadow: -1px 0 blue;
+	animation: glitch-anim-2 2s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim-1 {
+	$steps: 10;
+	@for $i from 0 through $steps {
+		#{percentage($i*(1/$steps))} {
+		clip: rect(random(100)+px, 9999px, random(100)+px, 0);
+		}
+	}
+}
+
+@keyframes glitch-anim-2 {
+	$steps: 10;
+	@for $i from 0 through $steps {
+		#{percentage($i*(1/$steps))} {
+		clip: rect(random(100)+px, 9999px, random(100)+px, 0);
+		}
+	}
+}
+
+// GLITCH - HERO3
+
+.glitch3 {
+	position: relative;
+}
+
+.glitch3:before,
+.glitch3:after {
+	content: attr(data-text);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.glitch3:before {
+	left: 2px;
+	text-shadow: -1px 0 red;
+	clip: rect(65px, 420px, 98px, 0);
+	animation: glitch-anim-1 1s infinite linear alternate-reverse;
+}
+
+.glitch3:after {
+	left: -2px;
+	text-shadow: -1px 0 blue;
+	animation: glitch-anim-2 3s infinite linear alternate-reverse;
+}
+
+// GLITCH - HERO4
+
+.glitch4 {
+	position: relative;
+}
+
+.glitch4:before,
+.glitch4:after {
+	content: attr(data-text);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.glitch4:before {
+	left: 2px;
+	text-shadow: -1px 0 red;
+	clip: rect(101px, 300px, 12px, 0);
+	animation: glitch-anim-1 4s infinite linear alternate-reverse;
+}
+
+.glitch4:after {
+	left: -2px;
+	text-shadow: -1px 0 blue;
+	animation: glitch-anim-2 0.5s infinite linear alternate-reverse;
+}
+
