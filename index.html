@@ -12,20 +12,39 @@
 
 <body>
 
+
+	<!-- MENU BURGER BUTTON -->
+	<button class="menu-button">
+		<div class="menu-bar"></div>
+		<div class="menu-bar"></div>
+		<div class="menu-bar"></div>
+	</button>
+	<!-- END MENU BURGER BUTTON -->
+
+
+
+	<!-- NAV/MENU -->
+	<nav id="menu">
+		<ul class="menu-nav">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Info</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Lyrics</a></li>
+			<li><a href="#">Mail</a></li>
+			<div class="swamiContainer"><a class="swami" href="#"></a></div>
+		</ul>
+	</nav>
+	<!-- END NAV/MENU -->
+
+
+
 	<div class="landingWrapper">
 		<div class="landingContent">
-			<div class="ladyContainer">
-				<img class="redLady" id="redLady" src="assets/retro-lady-red.png" alt="retro phone lady red">
-				<img class="yellowLady" id="yellowLady" src="assets/retro-lady-yellow.png" alt="retro phone lady yellow">
-			</div>
+
+
+			<!-- ALLTHETEXT -->
 			<div class="allTheText">
-				<div class="heroText heroText1">
-					<div class="heroTextInner heroTextInner1">
-						<p>NOT</p>
-						<p>SNA</p>
-						<p>KES</p>
-					</div>
-				</div>
+
 				<div class="heroText heroText2">
 					<div class="heroTextInner heroTextInner2">
 						<p class="glitch2" data-text="NOT">NOT</p>
@@ -47,13 +66,32 @@
 						<p class="glitch4" data-text="KES">KES</p>
 					</div>
 				</div>
+
 			</div>
+			<!-- END ALLTHETEXT -->
+
+
+
+			<!-- LADY -->
+			<div class="ladyContainer">
+				<img class="whiteLady" id="whiteLady" src="assets/whiteLady.png" alt="retro phone lady">
+				<div class="multiLady" id="multiLady">
+					<img class="cyanLady" id="cyanLady" src="assets/cyanLady.png" alt="retro phone lady">
+					<img class="magentaLady" id="magentaLady" src="assets/magentaLady.png" alt="retro phone lady">
+					<img class="yellowLady" id="yellowLady" src="assets/yellowLady.png" alt="retro phone lady">
+				</div>
+			</div>
+			<!-- END LADY -->
+
+
 		</div>
+		<!-- END LANDINGCONTENT -->
 
 	</div>
 
 	<!-- scripts -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
 	<script src="public/scripts/main.js"></script>
 	<!-- end scripts -->
 </body>

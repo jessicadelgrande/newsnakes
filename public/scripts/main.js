@@ -1,37 +1,52 @@
 'use strict';
 
 $(document).ready(function () {
-	// var yellowImg = document.getElementById('yellowLady');
-	// setInterval(function() {
-	// 	yellowLady.style.display = (yellowLady.style.display == 'none' ? '' : 'none');
-	// }, 200);
+  var bars = $('.menu-bar');
+  var menu = $('#menu');
+  var menuButton = $('.menu-button');
+  var timeline = new TimelineMax({ paused: true });
+  var open = false;
 
+  timeline.to(bars[0], 0.1, {
+    top: '7px',
+    rotation: 45
+  }, 0).to(bars[1], 0.1, {
+    opacity: 0
+  }, 0).to(bars[2], 0.1, {
+    top: '-7px',
+    rotation: -45
+  }, 0).to(menu, 0.4, {
+    width: '30%', // width
+    height: '0.5%'
+  }, '-=0.2').to(menu, 0.4, {
+    height: '100%',
+    ease: Bounce.easeOut
+  }, '-=0.2').to(menu.find('a'), 0.4, {
+    opacity: 1
+  });
+
+  menuButton.on('click', function () {
+    $(this).toggleClass('active');
+    if (open) {
+      timeline.reverse();
+      open = false;
+    } else {
+      timeline.play();
+      open = true;
+    }
+  });
+
+  menu.find('a').on('click', function () {
+    timeline.reverse();
+  });
 });
 
-$('.allTheText').hover(function () {
-	$(this).find('.heroText1').hide();
-	$(this).find('.heroTextInner1').hide();
-	$(this).find('.heroText2').show();
-	$(this).find('.heroTextInner2').show();
-	$(this).find('.heroText3').show();
-	$(this).find('.heroTextInner3').show();
-	$(this).find('.heroText4').show();
-	$(this).find('.heroTextInner4').show();
-}, function () {
-	$(this).find('.heroText1').show();
-	$(this).find('.heroTextInner1').show();
-	$(this).find('.heroText2').hide();
-	$(this).find('.heroTextInner2').hide();
-	$(this).find('.heroText3').hide();
-	$(this).find('.heroTextInner3').hide();
-	$(this).find('.heroText4').hide();
-	$(this).find('.heroTextInner4').hide();
-});
-
-$('.allTheText').hover(function () {
-	$(this).addClass('hover');
-}, function () {
-	$(this).removeClass('hover');
+// STROBE LADIES
+$(document).ready(function () {
+  var ladies = document.getElementById('multiLady');
+  setInterval(function () {
+    multiLady.style.display = multiLady.style.display == 'none' ? '' : 'none';
+  }, 150);
 });
 
 // App.init = () => {
